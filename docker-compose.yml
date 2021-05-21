@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    image: nginxinc/nginx-unprivileged
+    ports:
+      - "90:80"
+      - "9090:8080"
+    volumes: 
+    #   - ./templates:/etc/nginx/templates
+      - ./data:/home/nginx
+      - ./conf:/etc/nginx/conf.d
+      - ${PWD}/global-config/nginx.conf:/etc/nginx/nginx.conf
+    # environment:
+    #   - NGINX_PORT=8080
