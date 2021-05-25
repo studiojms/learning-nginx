@@ -5,6 +5,8 @@ services:
     ports:
       - "90:80"
       - "9090:8080"
+      - "9001:8001"
+      - "9002:8002"
     volumes: 
     #   - ./templates:/etc/nginx/templates
       - ./data:/home/nginx
