@@ -7,6 +7,7 @@ services:
       - "9090:8080"
       - "9001:8001"
       - "9002:8002"
+      - "9003:8003"
     volumes: 
     #   - ./templates:/etc/nginx/templates
       - ./data:/home/nginx
