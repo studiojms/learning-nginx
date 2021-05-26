@@ -9,9 +9,7 @@ services:
       - "9002:8002"
       - "9003:8003"
     volumes: 
-    #   - ./templates:/etc/nginx/templates
       - ./data:/home/nginx
       - ./conf:/etc/nginx/conf.d
       - ${PWD}/global-config/nginx.conf:/etc/nginx/nginx.conf
-    # environment:
-    #   - NGINX_PORT=8080
+      - ./logs:/home/logs
